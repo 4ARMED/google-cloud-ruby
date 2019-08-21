@@ -27,5 +27,5 @@ cd $REPO_DIR
 if [[ $(git log --format=%B -n 1 $KOKORO_GIT_COMMIT) = *"[ci skip]"* && $JOB_TYPE = "presubmit" ]]; then
     echo "[ci skip] found. Exiting"
 else
-    python3 "${KOKORO_GFILE_DIR}/trampoline_v1.py"
+    python3 "${KOKORO_GFILE_DIR}/${KOKORO_SCRIPT}"
 fi
